@@ -834,8 +834,8 @@ footer {
   .hamburger { display: flex; }
   #hero { grid-template-columns: 1fr; }
   .hero-text-side { padding: 7rem 1.5rem 2rem; }
-  .hero-image-side { padding: 1rem 1.5rem 5rem; }
-  .hero-image-container, .hero-image-bg { width: 260px; height: 330px; }
+  .hero-image-side { padding: 1rem 3rem 5rem; }
+  .hero-image-container, .hero-image-bg { width: 270px; height: 330px; }
   .hero-scroll-hint { left: 1.5rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card:nth-child(2), .project-card:nth-child(3) { margin-top: 0; }
@@ -987,7 +987,30 @@ footer {
   </div>
 
   <div class="projects-grid">
+    
+
     <!-- Card 1 -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-image">
+        <div class="project-image-bg" style="background: linear-gradient(135deg, #D4E8FF 0%, #A0C4F5 100%);"><img src="./img/braidconnect.png" /></div>
+      </div>
+      <div class="project-body">
+        <div class="project-category">Business · Web App</div>
+        <div class="project-name">BraiderConnect</div>
+        <p class="project-desc">Connects users with professional braiders to discover, compare and book services.</p>
+        <div class="project-tags">
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://braiderconnect.netlify.app/" class="project-link primary">Live Demo</a>
+          <a href="https://github.com/Linda-riziki/BraiderConnect.git" class="project-link secondary">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
     <div class="project-card reveal">
       <div class="project-image">
         <div class="project-image-bg" style="background: linear-gradient(135deg, #FFE5D4 0%, #F5C4A0 100%);"><img src="./img/herhealth.png" /></div>
@@ -1004,27 +1027,6 @@ footer {
         <div class="project-links">
           <a href="https://stupendous-frangollo-89b2da.netlify.app/" class="project-link primary">Live Demo</a>
           <a href="https://github.com/Linda-riziki/Cervicare-Web-App.git" class="project-link secondary">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-image">
-        <div class="project-image-bg" style="background: linear-gradient(135deg, #D4E8FF 0%, #A0C4F5 100%);"><img src="./img/braidconnect.png" /></div>
-      </div>
-      <div class="project-body">
-        <div class="project-category">Business · Web App</div>
-        <div class="project-name">BraiderConnect</div>
-        <p class="project-desc">Connects users with professional braiders to discover, compare and book services — with ratings, portfolios, and in-salon or home options.</p>
-        <div class="project-tags">
-          <span class="project-tag">Node.js</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Python</span>
-        </div>
-        <div class="project-links">
-          <a href="https://braiderconnect.netlify.app/" class="project-link primary">Live Demo</a>
-          <a href="https://github.com/Linda-riziki/BraiderConnect.git" class="project-link secondary">GitHub</a>
         </div>
       </div>
     </div>
@@ -1047,31 +1049,27 @@ footer {
         </div>
       </div>
     </div>
-
-    <!-- Featured Card -->
-    <div class="project-card project-featured reveal">
-      <div class="project-image">
-        <div class="project-image-bg" style="font-size: 5rem;"><img src="./img/herhealth.png" /></div>
-      </div>
-      <div class="project-body">
-        <div class="project-category">★ Featured Project</div>
-        <div class="project-name">CerviCare — Women's Health AI</div>
-        <p class="project-desc">A full-stack AI-powered web app for cervical cancer risk assessment built and presented at a hackathon. Features an HTML/CSS/JS frontend, Express.js backend, and a Python AI model trained on real medical datasets deployed and live.</p>
-        <div class="project-tags">
-        <span class="project-tag">HTML/CSS/JS</span>
-        <span class="project-tag">Express.js</span>
-        <span class="project-tag">Python</span>
-        <span class="project-tag">AI/ML</span>
-        <span class="project-tag">Jupyter</span>
-</div>
-<div class="project-links">
-  <a href="https://stupendous-frangollo-89b2da.netlify.app/" class="project-link primary">Live Demo</a>
-  <a href="https://github.com/Linda-riziki/Cervicare-Web-App" class="project-link secondary">GitHub</a>
-</div>
-      </div>
+<!-- Featured Card -->
+<div class="project-card project-featured reveal">
+  <div class="project-image">
+    <div class="project-image-bg"><img src="./img/braidconnect.png" /></div>
+  </div>
+  <div class="project-body">
+    <div class="project-category">★ Featured Project</div>
+    <div class="project-name">BraiderConnect</div>
+    <p class="project-desc">An AI-powered platform connecting users with professional braiders — discover, compare and book services based on ratings, portfolios, and availability, with both in-salon and home service options.</p>
+    <div class="project-tags">
+      <span class="project-tag">Node.js</span>
+      <span class="project-tag">JavaScript</span>
+      <span class="project-tag">Python</span>
+      <span class="project-tag">AI</span>
+    </div>
+    <div class="project-links">
+      <a href="https://braiderconnect.netlify.app/" class="project-link primary">Live Demo</a>
+      <a href="https://github.com/Linda-riziki/BraiderConnect.git" class="project-link secondary">GitHub</a>
     </div>
   </div>
-</section>
+</div>
 
 <!-- ==================== SKILLS ==================== -->
 <section id="skills">
