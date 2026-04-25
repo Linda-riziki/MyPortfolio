@@ -262,6 +262,9 @@ nav.scrolled {
   opacity: 0; animation: fadeUp 0.9s 3.2s ease forwards;
   margin-top: 1.5rem;
 }
+.hero-tag, .hero-greeting, .hero-tagline, .hero-cta, .hero-scroll-hint {
+  animation-play-state: paused;
+}
 .scroll-line { width: 50px; height: 1px; background: var(--light-text); }
 .scroll-text { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--light-text); }
 
@@ -1354,6 +1357,14 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
+});
+
+window.addEventListener('load', () => {
+  document.querySelector('.hero-tag').style.animationPlayState = 'running';
+  document.querySelector('.hero-greeting').style.animationPlayState = 'running';
+  document.querySelector('.hero-tagline').style.animationPlayState = 'running';
+  document.querySelector('.hero-cta').style.animationPlayState = 'running';
+  document.querySelector('.hero-scroll-hint').style.animationPlayState = 'running';
 });
 
 /* ============================================
