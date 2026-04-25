@@ -824,7 +824,8 @@ footer {
   .skills-layout { grid-template-columns: 1fr; gap: 3rem; }
   .skills-bubbles-wrap { grid-template-columns: repeat(4, 1fr); }
   .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-  #projects, #skills, #journey, #contact { padding: 6rem 3rem; }
+  #projects, #skills, #journey, #contact { padding: 6rem 2rem; }
+  #skills, #contact { width: 100%; box-sizing: border-box; }
   footer { padding: 2rem 3rem; }
   nav, nav.scrolled { padding: 1.2rem 2rem; }
 }
@@ -834,14 +835,17 @@ footer {
   .hamburger { display: flex; }
   #hero { grid-template-columns: 1fr; }
   .hero-text-side { padding: 7rem 1.5rem 2rem; }
-  .hero-image-side { padding: 1rem 3rem 5rem; }
-  .hero-image-container, .hero-image-bg { width: 270px; height: 330px; }
-  .hero-scroll-hint { left: 1.5rem; }
+  .hero-image-side { padding: 1rem 1.5rem 5rem; }
+  .hero-image-container, .hero-image-bg { width: 300px; height: 370px; }
+  .hero-scroll-hint { position: relative; left: auto; bottom: auto; margin-top: 1.5rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card:nth-child(2), .project-card:nth-child(3) { margin-top: 0; }
   .project-featured { grid-template-columns: 1fr; }
-  .skills-bubbles-wrap { grid-template-columns: repeat(3, 1fr); }
-  #projects, #skills, #journey, #contact { padding: 5rem 1.5rem; }
+  .skills-layout { grid-template-columns: 1fr; }
+  .skills-bubbles-wrap { grid-template-columns: repeat(3, 1fr); width: 100%; overflow: hidden; }
+  .skill-bubble { font-size: 0.7rem; padding: 0.6rem; }
+  #projects, #skills, #journey, #contact { padding: 5rem 1.5rem; width: 100%; box-sizing: border-box; }
+  #skills { overflow: hidden; }
   footer { padding: 1.5rem; flex-direction: column; text-align: center; }
   .float-badge-1 { left: -10px; bottom: 30px; }
   .float-badge-2 { right: -10px; top: 50px; }
@@ -1070,6 +1074,9 @@ footer {
     </div>
   </div>
 </div>
+
+ </div>
+</section>
 
 <!-- ==================== SKILLS ==================== -->
 <section id="skills">
