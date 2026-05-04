@@ -713,6 +713,144 @@ section { position: relative; }
 .timeline-item:nth-child(even) .timeline-icon { margin-bottom: 0; margin-top: 1rem; order: -1; }
 
 /* ============================================
+   CERTIFICATIONS SECTION
+   ============================================ */
+#certifications {
+  background: var(--nude-beige);
+  padding: 8rem 0;
+}
+
+#certifications .section-label,
+#certifications .section-title {
+  padding: 0 8rem;
+}
+
+.cert-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3rem;
+  position: relative;
+}
+
+/* Fade edges */
+.cert-marquee-wrap::before,
+.cert-marquee-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.cert-marquee-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--nude-beige), transparent);
+}
+.cert-marquee-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--nude-beige), transparent);
+}
+
+.cert-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.cert-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.cert-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.cert-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(214,167,122,0.2);
+  box-shadow: 0 4px 20px rgba(62,39,35,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: none;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(62,39,35,0.12);
+}
+
+.cert-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--soft-cream);
+}
+
+.cert-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-image img {
+  transform: scale(1.05);
+}
+
+.cert-body {
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid rgba(214,167,122,0.15);
+}
+
+.cert-issuer {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.cert-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--deep-brown);
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.cert-date {
+  font-size: 0.78rem;
+  color: var(--light-text);
+}
+
+/* Responsive — stays horizontal on all screens */
+@media (max-width: 1100px) {
+  #certifications { padding: 6rem 0; }
+  #certifications .section-label,
+  #certifications .section-title { padding: 0 2rem; }
+  .cert-card { width: 260px; }
+}
+
+@media (max-width: 768px) {
+  #certifications { padding: 5rem 0; }
+  #certifications .section-label,
+  #certifications .section-title { padding: 0 1.5rem; }
+  .cert-card { width: 230px; }
+  .cert-image { height: 150px; }
+}
+/* ============================================
    CONTACT SECTION
    ============================================ */
 #contact {
@@ -929,7 +1067,7 @@ footer {
         <span class="badge-icon"><i class="fa-solid fa-brain"></i></span>
         <div class="badge-text">
           AI Developer
-          <span class="badge-label">Generative AI, Python</span>
+          <span class="badge-label">AI/ML · Python · Flask</span>
         </div>
       </div>
       <div class="float-badge float-badge-2">
@@ -1215,6 +1353,83 @@ footer {
   </div>
 </section>
 
+<!-- ==================== CERTIFICATIONS ==================== -->
+ <section id="certifications">
+  <div class="section-label reveal">Credentials</div>
+  <h2 class="section-title reveal reveal-delay-1">Certifications &<br><em>achievements</em></h2>
+<div class="cert-marquee-wrap reveal reveal-delay-2">
+  <div class="cert-marquee">
+    <div class="cert-track">
+      <!-- Original cards -->
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert1.png" alt="Certificate 1" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">Power Learn Project</div>
+          <div class="cert-name">Full-stack developer MERN Stack</div>
+          <div class="cert-date">July 10th, 2024</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert2.jpg" alt="Certificate 2" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">Women in Tech BootCamp</div>
+          <div class="cert-name">AI/ML</div>
+          <div class="cert-date">November 5, 2024</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert3.png" alt="Certificate 3" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">freeCodeCamp</div>
+          <div class="cert-name">Responsive Web Design</div>
+          <div class="cert-date">May 1, 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert4.png" alt="Certificate 4" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">Martial School of IT</div>
+          <div class="cert-name">Generative AI Masterclass</div>
+          <div class="cert-date">February 20, 2025</div>
+        </div>
+      </div>
+      <!-- Duplicate cards for seamless loop -->
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert1.png" alt="Certificate 1" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">Power Learn Project</div>
+          <div class="cert-name">Full-stack developer MERN Stack</div>
+          <div class="cert-date">July 10th, 2024</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert2.jpg" alt="Certificate 2" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">Women in Tech BootCamp</div>
+          <div class="cert-name">AI/ML</div>
+          <div class="cert-date">November 5, 2024</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert3.png" alt="Certificate 3" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">freeCodeCamp</div>
+          <div class="cert-name">Responsive Web Design</div>
+          <div class="cert-date">May 1, 2025</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-image"><img src="./img/cert4.png" alt="Certificate 4" /></div>
+        <div class="cert-body">
+          <div class="cert-issuer">Martial School of IT</div>
+          <div class="cert-name">Generative AI Masterclass</div>
+          <div class="cert-date">February 20, 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 <!-- ==================== CONTACT ==================== -->
 <section id="contact">
   <div class="contact-inner">
